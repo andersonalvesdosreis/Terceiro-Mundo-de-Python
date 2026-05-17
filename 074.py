@@ -4,6 +4,5 @@ numero_maior = 0
 lista_aleatoria = (random.choice(lista_1_10),random.choice(lista_1_10),random.choice(lista_1_10),random.choice(lista_1_10))
 print('Escolha do computador:')
 print(lista_aleatoria)
-for verificar_numero_maior in lista_aleatoria:
-    numero_maior = verificar_numero_maior
-    
+print('Maior Valor',max(lista_aleatoria))
+print('Menor Valor',min(lista_aleatoria))
