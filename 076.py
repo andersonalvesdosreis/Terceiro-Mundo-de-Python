@@ -1,0 +1,5 @@
+produtos = ('Café............R$1,75','Café e Leite....R$2,80','Leite...........R$1,20')
+print('='*20,'Padaria do seu Zé','='*20)
+print(produtos[0])
+print(produtos[1])
+print(produtos[2])
