@@ -4,7 +4,6 @@ while True:
     contador += 1
     lista.append(int(input('Digite um numero: ')))
     pergunta2 = str(input('Deseja continuar? (s/n): ')).lower()
-    lista_em_ordem = lista.reverse()
     if pergunta2 in 's':
         continue
     else:
@@ -12,5 +11,6 @@ while True:
 print(f'Você digitou {contador} numeros!')
 if 5 in lista:
     print('A o numero 5 na lista!')
-print(f'A lista em ordem decresente: {lista_em_ordem}')
+lista.sort(reverse=True)
+print(f'A lista em ordem decresente: {lista}')
 
