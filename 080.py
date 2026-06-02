@@ -1,12 +1,15 @@
-for add in range(0,5):
-    pergunta = int(input("digite um numero: "))
-    print(f'Adicionando {pergunta} ao final da lista...')
-    pergunta2 = int(input("digite um numero: "))
-    print(f'Adicionando {pergunta2} ao começo da lista...')
-    pergunta3 = int(input("digite um numero: "))
-    print(f'Adicionando {pergunta3} na posição 1 da lista')
-    pergunta4 = int(input("digite um numero: "))
-    print(f'Adicionando {pergunta4} ao final da lista...')
-    pergunta5 = int(input("digite um numero: "))
-    print(f'Adicionando {pergunta5} no começo da lista...')
-    
+lista = []
+for c in range(0,5):
+    n = int(input('Digite um numero: '))
+    if c == 0:
+        lista.append(n)
+    elif n > lista[-1]:
+        lista.append(n)
+    else:
+        pos = 0
+        while pos < len(lista):
+            if n <= lista[pos]:
+                lista.insert(pos,n)
+                break
+            pos += 1
+print(f'Os valores digitados em ordem foram {lista}')
