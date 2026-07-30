@@ -8,7 +8,7 @@ while True:
     idade = int(input('Idade: '))
     idade_de_todos += idade
     sexo = str(input('Sexo(M/F): ')) 
-    if sexo != 'M' or sexo != 'F':
+    if sexo != 'M' and sexo != 'F':
         print(f'Você digitou {sexo} que não se enquadra nas restrições tente novamente!') 
         print('Digite novamente!')
         sexo = str(input('Sexo(M/F): '))
@@ -36,6 +36,5 @@ print(f'A Média das Idades foram de {media}')
 print(f'As Mulheres cadastradas foram: {lista_mulheres}')
 
 print('As pessoas Cadastradas Acima da Média foram:')
-for analisar in lista:
-    if idade > media:
-        print(f'nome: {nome},idade: {idade},sexo: {sexo}')
+if idade > media:
+    print(f'nome: {nome},idade: {idade},sexo: {sexo}')
