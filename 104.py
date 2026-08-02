@@ -1,9 +1,12 @@
 def leiaInt(caracter):
-    if caracter.isnumeric():
-        print(f'{caracter} é um numero!')
-    else:
-        print(f'{caracter} não é um numero!')
+    while True:
+        pergunta_p = input(caracter)
+        if pergunta_p.isnumeric():
+            print(f'{pergunta_p} é um numero!')
+            break
+        else:
+            print('\033[31mERRO DIGITE UM NUMERO INTEIRO!\033[m')
+            continue
 
 
-pergunta = input('Digite algo: ')
-leiaInt(pergunta)
+pergunta = leiaInt('Digite algo: ')
