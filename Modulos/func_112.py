@@ -1,24 +1,27 @@
+def mostrar(funcao):
+    return (f'R${funcao:.2f}'.replace(".", ","))
+
 def met(num):
     metade = num/2
-    return (f'R${metade:.2f}'.replace(".", ","))
+    return mostrar(metade)
 
 
 def dobro(num):
     dobro = num*2
-    return (f'R${dobro:.2f}'.replace(".", ","))
+    return mostrar(dobro)
 
 
 def aumento(num):
     novo_valor = num + ((num*10)/100)
-    return (f'R${novo_valor:.2f}'.replace(".", ","))
+    return mostrar(novo_valor)
 
 def aumento2(num):
     novo_valor = num + ((num*20)/100)
-    return (f'R${novo_valor:.2f}'.replace(".", ","))
+    return mostrar(novo_valor)
 
 
 def novo_valor(num):
-    return (f'R${num:.2f}'.replace(".", ","))
+    return mostrar(num)
 
 def resumo(num):
     print('-='*15)
@@ -33,7 +36,19 @@ def resumo(num):
 
 def analisar(num):
     try:
-        numero = float(num)
-        return resumo(numero)
+        numero = float(num.replace(",", "."))
+        return False
     except ValueError:
-        print(f'\033[31mERRO: ->{num}, não se enquadra nos requisitos!\033m')
+        return True
+
+
+def funcao_principal():
+    while True:
+        pergunta = input('Digite um valor: R$')
+        if not analisar(pergunta):
+            numero_novo = float(pergunta.replace(",", "."))
+            resumo(numero_novo)
+            break
+        else:
+            print(f'\033[31mERRO: ->{pergunta}, não se enquadra nos requisitos!\033[m')
+            continue

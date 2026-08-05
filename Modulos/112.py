@@ -1,3 +1,2 @@
-from func_112 import analisar
-pergunta = input('Digite um valor: R$')
-analisar(pergunta)
+from func_112 import funcao_principal
+funcao_principal()
