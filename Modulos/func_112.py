@@ -74,8 +74,8 @@ def funcao_principal():
         if not analisar(pergunta):
             numero_novo = float(pergunta.replace(",", "."))
             resumo(numero_novo)
-            pergunta2 = int(input('Deseja conhecer como a função funciona? (digite 1 para sim)'))
-            if pergunta2 == 1:
+            pergunta2 = input('Deseja conhecer como a função funciona? (digite 1 para sim)')
+            if pergunta2 == '1':
                 help(funcao_principal)
                 break
             else:
