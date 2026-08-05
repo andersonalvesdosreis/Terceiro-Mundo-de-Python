@@ -36,4 +36,4 @@ def analisar(num):
         numero = float(num)
         return resumo(numero)
     except ValueError:
-        print(f'\033[32mERRO: {num} não se enquadra nos requisitos!\033m')
+        print(f'\033[31mERRO: ->{num}, não se enquadra nos requisitos!\033m')
